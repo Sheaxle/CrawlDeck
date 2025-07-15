@@ -1,5 +1,73 @@
+## Build results
 bin/
 obj/
-/packages/
+
+## Rider / IntelliJ
+.idea/
+*.iml
 riderModule.iml
+/.idea/
+.idea/
+*.sln.iml
+
+## ReSharper
+_ReSharper*/
+*.DotSettings.user
+*.sln.DotSettings.user
+/.resharper/
+*_Resharper.*
 /_ReSharper.Caches/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Dotnet package folder
+/packages/
+# Uncomment if necessary
+# !packages/build/
+
+## Logs
+*.log
+
+## VS Code settings (falls du VS Code verwendest)
+.vscode/
+
+## NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+*.nuspec
+.nuget/
+packages.lock.json
+
+## MSBuild binary log
+*.binlog
+
+## Coverage reports
+coverage*.json
+coverage*.xml
+coverage*.info
+*.lcov
+*.coverage
+*.coveragexml
+
+## Others
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+
+# Rider Caches
+/.idea/
+/.idea/
+/*.ipr
+
+# Local settings
+Directory.Build.props
+Directory.Build.targets
