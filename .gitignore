@@ -1,55 +1,73 @@
-# Prerequisites
-*.d
+## Build results
+bin/
+obj/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+## Rider / IntelliJ
+.idea/
+*.iml
+riderModule.iml
+/.idea/
+.idea/
+*.sln.iml
 
-# Linker output
-*.ilk
-*.map
-*.exp
+## ReSharper
+_ReSharper*/
+*.DotSettings.user
+*.sln.DotSettings.user
+/.resharper/
+*_Resharper.*
+/_ReSharper.Caches/
 
-# Precompiled Headers
-*.gch
-*.pch
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+## Dotnet package folder
+/packages/
+# Uncomment if necessary
+# !packages/build/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+## Logs
+*.log
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+## VS Code settings (falls du VS Code verwendest)
+.vscode/
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+## NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+*.nuspec
+.nuget/
+packages.lock.json
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+## MSBuild binary log
+*.binlog
 
-# debug information files
-*.dwo
+## Coverage reports
+coverage*.json
+coverage*.xml
+coverage*.info
+*.lcov
+*.coverage
+*.coveragexml
+
+## Others
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+
+# Rider Caches
+/.idea/
+/.idea/
+/*.ipr
+
+# Local settings
+Directory.Build.props
+Directory.Build.targets
