@@ -8,9 +8,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{55767117
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A1D3E579-54CF-4C50-A444-7A2DFEF96ED0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlDeck.UI", "Search\CrawlDeck.UI\CrawlDeck.UI.csproj", "{81AFD959-5109-4213-B2C1-1D0CF8057C24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{81AFD959-5109-4213-B2C1-1D0CF8057C24} = {8DF640DB-D1D7-49BE-A77E-46F11C8C9D16}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81AFD959-5109-4213-B2C1-1D0CF8057C24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AFD959-5109-4213-B2C1-1D0CF8057C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AFD959-5109-4213-B2C1-1D0CF8057C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AFD959-5109-4213-B2C1-1D0CF8057C24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
