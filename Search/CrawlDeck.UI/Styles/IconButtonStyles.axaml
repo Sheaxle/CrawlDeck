@@ -1,0 +1,89 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cc="using:CrawlDeck.UI.CustomControls">
+    
+    <Design.PreviewWith>
+        <StackPanel Spacing="10" Margin="20">
+            <cc:IconButton Content="Sample Button"/>
+            
+            <cc:IconButton Content="With Icon" 
+                           Icon="&#xE748;" />
+            
+            <cc:IconButton Content="Hidden Icon" 
+                           Icon="&#xE766;" 
+                           IsContentVisible="False" />
+        </StackPanel>
+    </Design.PreviewWith>
+
+    <Style Selector="cc|IconButton">
+        <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource ButtonForeground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrush}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource ButtonBorderThemeThickness}" />
+        <Setter Property="Padding" Value="{DynamicResource ButtonPadding}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="MinWidth" Value="64" />
+        <Setter Property="Template">
+            
+            <ControlTemplate TargetType="cc:IconButton">
+                <Border Name="PART_Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{DynamicResource ControlCornerRadius}"
+                        Padding="{TemplateBinding Padding}">
+                    
+                    <StackPanel Orientation="Horizontal" 
+                                Spacing="8"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                        
+                        <TextBlock Name="PART_Icon"
+                                   Text="{TemplateBinding Icon}"
+                                   FontSize="16"
+                                   VerticalAlignment="Center"
+                                   FontFamily="{StaticResource Phosphor}"/>
+                        
+                        <TextBlock Name="PART_Text"
+                                   Text="{TemplateBinding Content}"
+                                   VerticalAlignment="Center" 
+                                   IsVisible="{TemplateBinding IsContentVisible}"/>
+                    </StackPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="cc|IconButton:pointerover /template/ Border#PART_Border">
+        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundPointerOver}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushPointerOver}" />
+    </Style>
+
+    <Style Selector="cc|IconButton:pressed /template/ Border#PART_Border">
+        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundPressed}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushPressed}" />
+    </Style>
+
+    <Style Selector="cc|IconButton:disabled /template/ Border#PART_Border">
+        <Setter Property="Background" Value="{DynamicResource ButtonBackgroundDisabled}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushDisabled}" />
+    </Style>
+
+    <Style Selector="cc|IconButton:disabled /template/ Border#PART_Border > StackPanel > TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource ButtonForegroundDisabled}" />
+    </Style>
+    
+    <Style Selector="cc|IconButton:content-hidden /template/ Border#PART_Border">
+        <Setter Property="Width" Value="35"/>
+    </Style>
+    
+    <Style Selector="cc|IconButton">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+</Styles>
