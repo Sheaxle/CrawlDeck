@@ -14,9 +14,82 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <customControls:IconButton Content="Moin" 
-                               Icon="&#xe2c2;" 
-                               IsContentVisible="{Binding IsContentVisible}"
-                               Command="{Binding ChangeVisibleCommand}"/>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Sidebar -->
+        <customControls:SideBar Grid.Column="0" 
+                                x:Name="MainSideBar"
+                                IsExpanded="True"
+                                ExpandedWidth="250"
+                                CollapsedWidth="60">
+            
+            <!-- Header with Toggle Button -->
+            <customControls:SideBar.Header>
+                <customControls:IconButton Content="Menu" 
+                                           Icon="&#xe5d2;" 
+                                           IsContentVisible="{Binding #MainSideBar.IsExpanded}"
+                                           Click="ToggleSidebar_Click"
+                                           HorizontalAlignment="Left"
+                                           Margin="8"/>
+            </customControls:SideBar.Header>
+            
+            <!-- Sidebar Items -->
+            <Button Theme="{StaticResource SideBarItemButton}">
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <TextBlock Text="&#xe88a;" FontFamily="{StaticResource Phosphor}" FontSize="20"/>
+                    <TextBlock Text="Dashboard" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Theme="{StaticResource SideBarItemButton}">
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <TextBlock Text="&#xe8b8;" FontFamily="{StaticResource Phosphor}" FontSize="20"/>
+                    <TextBlock Text="Search" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Theme="{StaticResource SideBarItemButton}">
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <TextBlock Text="&#xe8b0;" FontFamily="{StaticResource Phosphor}" FontSize="20"/>
+                    <TextBlock Text="Settings" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            
+            <!-- Footer -->
+            <customControls:SideBar.Footer>
+                <Button Theme="{StaticResource SideBarItemButton}" Margin="8">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <TextBlock Text="&#xe853;" FontFamily="{StaticResource Phosphor}" FontSize="20"/>
+                        <TextBlock Text="Help" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </customControls:SideBar.Footer>
+        </customControls:SideBar>
+        
+        <!-- Main Content Area -->
+        <Border Grid.Column="1" 
+                Background="{DynamicResource SystemControlBackgroundAltHighBrush}"
+                Padding="20">
+            <StackPanel>
+                <TextBlock Text="Main Content Area" 
+                           FontSize="24" 
+                           FontWeight="Bold"
+                           Margin="0,0,0,20"/>
+                
+                <TextBlock Text="The sidebar can be toggled between expanded and collapsed states."
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,10"/>
+                
+                <customControls:IconButton Content="Test Button" 
+                                           Icon="&#xe2c2;" 
+                                           IsContentVisible="{Binding IsContentVisible}"
+                                           Command="{Binding ChangeVisibleCommand}"/>
+            </StackPanel>
+        </Border>
+    </Grid>
 
 </Window>

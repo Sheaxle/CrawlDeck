@@ -11,6 +11,7 @@
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="/Styles/IconButtonStyles.axaml" />
+        <StyleInclude Source="/Styles/SideBarStyles.axaml" />
     </Application.Styles>
     
     <Application.Resources>
